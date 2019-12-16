@@ -1,0 +1,57 @@
+/**
+ * ZPID theme for reveal.js
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Zilla+Slab:500|Source+Code+Pro&display=swap');
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: rgb(230, 236, 240);
+
+$mainColor: rgb(43, 33, 113);
+$headingColor: $mainColor;
+
+$mainFontSize: 20pt;
+$mainFont: 'Montserrat', sans-serif;
+$headingFont: 'Zilla Slab', serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 500;
+$codeFont: 'Source Code Pro', monospace;
+
+$linkColor: rgb(175, 51, 161);
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+$blockMargin: 0.9em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.reveal section div.extra-bg {
+	background-color: $backgroundColor;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+	padding: 0.3em;
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
